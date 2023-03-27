@@ -13,53 +13,78 @@
             }
 
             h2 {
-                font-size: 48px;
+                color: #c52592;
             }
 
             body {
-                background-color: rgba(143, 12, 143, 0.5);
+                background-color: rgba(137, 137, 137, 0.5);
+            }
+            .me{
+                width: 175px;
+                height: 175px;
+                border-radius: 15px;
+            }
+            .content{
+                padding: 10px;
+            }
+            .anime{
+                width:400px;
+            }
+            h1{
+                color: green;
+            }
+            body{
+                background-color: bisque;
             }
         </style>
     </head>
     <body>
-        <h1>Header</h1>
+        <h1>Gabriel Carrillo</h1>
         <hr />
         <div id="nav">
-            <a href="#">Bio</a>
-            <a href="#">Education</a>
-            <a href="#">Hobbies</a>
+            <a href="#">BIO</a>
+            <a href="#">EDUCATION</a>
+            <a href="#">HOBBIES</a>
         </div>
-        <hr />
+        <hr>
         <div id="main">
+
+            <!-- bio -->
             <div id="bio" class="content">
-                <h2>BIO</h2>
+                <h2>My Bio</h2>
+                <img src="images/me.JPG" alt="Young Gabriel" class="me">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Illum, non? Qui similique quis obcaecati quidem? Eum labore
-                    odio vel placeat non facilis at, corrupti est! Error
-                    aspernatur dolore quidem nam?
+                    I am currently a freshman at the <b>New England Institute of Technology</b>, where I am pursuing a bachelor's degree in
+                    <i>Software Engineering</i>. Before starting college, I attended <strong>Taunton High School</strong> and developed a passion for computer science and programming. I am excited to continue learning and growing in my field at NEIT, and I hope to use my
+                    knowledge and skills to make a positive impact in the world of <em>software development</em>.
                 </p>
             </div>
 
-            <div id="ed" class="content">
-                <h2>Education</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Excepturi praesentium illo odio deleniti quaerat est,
-                    ratione beatae, esse ipsam magnam laboriosam officia. Est
-                    sequi iste suscipit saepe, voluptatibus exercitationem
-                    soluta.
-                </p>
+            <!-- schoooling -->
+            <div id="ed" class="content hide">
+                <h2>Schooling</h2>
+                <ul>
+                    <li>Taunton High School</li>
+                    <li>UMASS Dartmouth University</li>
+                    <li><a href="https://www.neit.edu/" target="_blank">New England Institute of Technology</a></li>
+                </ul>
             </div>
 
-            <div id="hobbies" class="content">
+            <!-- hobbies -->
+            <div id="hobbies" class="content hide">
                 <h2>Hobbies</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Atque tenetur quibusdam exercitationem vel aut aliquid,
-                    officia ex veritatis non commodi earum impedit provident
-                    fugiat aspernatur dolores magnam soluta, sapiente veniam.
-                </p>
+                <ol>
+                    <li>Video Games</li>
+                    <li>Anime</li>
+                    <li>Coding</li>
+                </ol>
+                <img src="images/hobbies/anime.png" alt="anime poster" class="anime">
+            </div>
+
+            <hr>
+            <!-- footer -->
+            <div id="footer">
+                <p>&copy; 2023 Gabriel Carrillo | W1 Assignment</p>
             </div>
         </div>
 
