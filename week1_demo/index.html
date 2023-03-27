@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Gabriel Carrillo" />
+        <meta name="description" content="" />
+        <title>Document</title>
+    </head>
+    <body class="green">
+        <a href="#" class="red a b">red</a>
+        <a href="#" class="blue a b">blue</a>
+        <input type="range" min="0" max="255">
+        <script>
+            var body = document.querySelector(`body`)
+            var a = document.querySelectorAll(`a`)
+            a[0].addEventListener("click", turnRed)
+            a[1].addEventListener("click", turnRed)
+            body.addEventListener("click", turnRed)
+            function turnRed(e)
+            {
+                e.preventDefault()
+                body.style.backgroundColor = e.target.classList[0]
+            }
+
+            document.querySelector(`input`).addEventListener(`mousemove`, function(e){
+                body.style.backgroundColor = `rgb(${e.target.value},0,0)`
+            })
+        </script>
+    </body>
+</html>
