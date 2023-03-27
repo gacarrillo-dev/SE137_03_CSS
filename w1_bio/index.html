@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
 
+        <!-- CSS -->
         <style>
             /* create hide class */
             .hide {
@@ -92,27 +93,33 @@
         </div>
 
         <script>
-            // select all (a) links from the nav id
+            // select all 'a' links from the nav id
             var a = document.querySelectorAll(`#nav a`)
             var header = document.querySelector(`h1`)
 
+            // loop through the links in nav
             for (let i = 0; i < a.length; i++) {
                 a[i].addEventListener("click", function (e) {
                     // remove link default value to not go to new page
                     e.preventDefault()
 
-                    // select all tags that have (content) class
+                    // select all tags that have 'content' class
                     var div = document.querySelectorAll(`.content`)
 
+                    // loop through each div and add the 'hide' class
                     for (let i = 0; i < div.length; i++) {
                         div[i].classList.add(`hide`)
                     }
 
+                    // remove 'hide' class from clicked link
                     div[i].classList.remove(`hide`)
                 })
             }
+
+            // when header is clicked the page will show all divs
             header.addEventListener("click", function(e){
                 var div = document.querySelectorAll(`.content`)
+                // loop through each div and remove hide class
                 for (let i = 0; i < div.length; i++){
                     div[i].classList.remove(`hide`)
                 }
