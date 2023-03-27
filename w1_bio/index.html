@@ -94,6 +94,7 @@
         <script>
             // select all (a) links from the nav id
             var a = document.querySelectorAll(`#nav a`)
+            var header = document.querySelector(`h1`)
 
             for (let i = 0; i < a.length; i++) {
                 a[i].addEventListener("click", function (e) {
@@ -110,6 +111,12 @@
                     div[i].classList.remove(`hide`)
                 })
             }
+            header.addEventListener("click", function(e){
+                var div = document.querySelectorAll(`.content`)
+                for (let i = 0; i < div.length; i++){
+                    div[i].classList.remove(`hide`)
+                }
+            })
         </script>
     </body>
 </html>
