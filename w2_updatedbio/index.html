@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>W1 | Bio Assignment</title>
+
+        <!-- CSS -->
+        <style>
+            /* create hide class */
+            .hide {
+                display: none;
+            }
+
+            h2 {
+                color: #c52592;
+            }
+
+            body {
+                background-color: rgba(137, 137, 137, 0.5);
+            }
+            .me{
+                width: 175px;
+                height: 175px;
+                border-radius: 15px;
+            }
+            .content{
+                padding: 10px;
+            }
+            .anime{
+                width:400px;
+            }
+            h1{
+                color: green;
+            }
+            body{
+                background-color: bisque;
+            }
+            .nav{
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Gabriel Carrillo</h1>
+        <hr />
+        <div id="nav">
+            <a href="#" class="nav">BIO</a>
+            <a href="#" class="nav">EDUCATION</a>
+            <a href="#" class="nav">HOBBIES</a>
+        </div>
+        <hr>
+        <div id="main">
+
+            <!-- bio -->
+            <div id="bio" class="content">
+                <h2>My Bio</h2>
+                <img src="images/me.JPG" alt="Young Gabriel" class="me">
+                <p>
+                    I am currently a freshman at the <b>New England Institute of Technology</b>, where I am pursuing a bachelor's degree in
+                    <i>Software Engineering</i>. Before starting college, I attended <strong>Taunton High School</strong> and developed a passion for computer science and programming. I am excited to continue learning and growing in my field at NEIT, and I hope to use my
+                    knowledge and skills to make a positive impact in the world of <em>software development</em>.
+                </p>
+            </div>
+
+            <!-- schoooling -->
+            <div id="ed" class="content hide">
+                <h2>Schooling</h2>
+                <ul>
+                    <li>Taunton High School</li>
+                    <li>UMASS Dartmouth University</li>
+                    <li><a href="https://www.neit.edu/" target="_blank">New England Institute of Technology</a></li>
+                </ul>
+            </div>
+
+            <!-- hobbies -->
+            <div id="hobbies" class="content hide">
+                <h2>Hobbies</h2>
+                <ol>
+                    <li>Video Games</li>
+                    <li>Anime</li>
+                    <li>Coding</li>
+                </ol>
+                <img src="images/hobbies/anime.png" alt="anime poster" class="anime">
+            </div>
+
+            <hr>
+            <!-- footer -->
+            <footer id="footer">
+                <p>&copy; 2023 Gabriel Carrillo | W1 Assignment</p>
+            </footer>
+        </div>
+
+        <script>
+            // select all 'a' links from the nav id
+            var a = document.querySelectorAll(`#nav a`)
+            var header = document.querySelector(`h1`)
+
+            // loop through the links in nav
+            for (let i = 0; i < a.length; i++) {
+                a[i].addEventListener("click", function (e) {
+                    // remove link default value to not go to new page
+                    e.preventDefault()
+
+                    // select all tags that have 'content' class
+                    var div = document.querySelectorAll(`.content`)
+
+                    // loop through each div and add the 'hide' class
+                    for (let i = 0; i < div.length; i++) {
+                        div[i].classList.add(`hide`)
+                    }
+
+                    // remove 'hide' class from clicked link
+                    div[i].classList.remove(`hide`)
+                })
+            }
+
+            // when header is clicked the page will show all divs
+            header.addEventListener("click", function(e){
+                var div = document.querySelectorAll(`.content`)
+                // loop through each div and remove hide class
+                for (let i = 0; i < div.length; i++){
+                    div[i].classList.remove(`hide`)
+                }
+            })
+        </script>
+    </body>
+</html>
