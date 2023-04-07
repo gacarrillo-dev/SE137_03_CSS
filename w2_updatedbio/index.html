@@ -4,91 +4,101 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>W1 | Bio Assignment</title>
-
-        <!-- CSS -->
-        <style>
-            /* create hide class */
-            .hide {
-                display: none;
-            }
-
-            h2 {
-                color: #c52592;
-            }
-
-            body {
-                background-color: rgba(137, 137, 137, 0.5);
-            }
-            .me{
-                width: 175px;
-                height: 175px;
-                border-radius: 15px;
-            }
-            .content{
-                padding: 10px;
-            }
-            .anime{
-                width:400px;
-            }
-            h1{
-                color: green;
-            }
-            body{
-                background-color: bisque;
-            }
-            .nav{
-                padding: 10px;
-            }
-        </style>
+        <title>W2 | Bio Update Assignment</title>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Gabriel Carrillo</h1>
-        <hr />
-        <div id="nav">
-            <a href="#" class="nav">BIO</a>
-            <a href="#" class="nav">EDUCATION</a>
-            <a href="#" class="nav">HOBBIES</a>
+        <!-- header -->
+        <div>
+            <h1>Gabriel Carrillo</h1>
         </div>
-        <hr>
-        <div id="main">
 
+        <!-- navigation bar -->
+        <div class="center" id="nav">
+            <a href="#" class="nav"><b>BIO</b></a>
+            <a href="#" class="nav"><b>EDUCATION</b></a>
+            <a href="#" class="nav"><b>HOBBIES</b></a>
+        </div>
+
+        <!-- MAIN -->
+        <div id="main">
             <!-- bio -->
             <div id="bio" class="content">
                 <h2>My Bio</h2>
-                <img src="images/me.JPG" alt="Young Gabriel" class="me">
-                <p>
-                    I am currently a freshman at the <b>New England Institute of Technology</b>, where I am pursuing a bachelor's degree in
-                    <i>Software Engineering</i>. Before starting college, I attended <strong>Taunton High School</strong> and developed a passion for computer science and programming. I am excited to continue learning and growing in my field at NEIT, and I hope to use my
-                    knowledge and skills to make a positive impact in the world of <em>software development</em>.
-                </p>
+                <div class="biopic">
+                    <img src="images/me.JPG" alt="Young Gabriel" class="me" />
+
+                    <p>
+                        I am currently a freshman at the
+                        <b>New England Institute of Technology</b>, where I am
+                        pursuing a bachelor's degree in
+                        <i>Software Engineering</i>. Before starting college, I
+                        attended <strong>Taunton High School</strong> and
+                        developed a passion for computer science and
+                        programming. I am excited to continue learning and
+                        growing in my field at NEIT, and I hope to use my
+                        knowledge and skills to make a positive impact in the
+                        world of <em>software development</em>.
+                    </p>
+                </div>
             </div>
 
             <!-- schoooling -->
             <div id="ed" class="content hide">
                 <h2>Schooling</h2>
+                <div class="center">
+                    <img
+                        src="images/schools/THS.png"
+                        alt="Taunton High School"
+                    />
+
+                    <img
+                        src="images/schools/umassd_school.png"
+                        alt="UMASS Dartmouth"
+                    />
+                    <img
+                        src="images/schools/neit_school.png"
+                        alt="Neit School"
+                    />
+                </div>
+
                 <ul>
                     <li>Taunton High School</li>
                     <li>UMASS Dartmouth University</li>
-                    <li><a href="https://www.neit.edu/" target="_blank">New England Institute of Technology</a></li>
+                    <li>
+                        <a href="https://www.neit.edu/" target="_blank"
+                            >New England Institute of Technology</a
+                        >
+                    </li>
                 </ul>
             </div>
 
             <!-- hobbies -->
             <div id="hobbies" class="content hide">
                 <h2>Hobbies</h2>
+                <div class="center">
+                    <img src="images/hobbies/anime.png" alt="anime poster" />
+                    <img
+                        src="images/hobbies/coding.png"
+                        alt="coding poster"
+                        class="anime"
+                    />
+                    <img
+                        src="images/hobbies/gaming.png"
+                        alt="gaming poster"
+                        class="anime"
+                    />
+                </div>
                 <ol>
                     <li>Video Games</li>
                     <li>Anime</li>
                     <li>Coding</li>
                 </ol>
-                <img src="images/hobbies/anime.png" alt="anime poster" class="anime">
             </div>
 
-            <hr>
             <!-- footer -->
-            <footer id="footer">
-                <p>&copy; 2023 Gabriel Carrillo | W1 Assignment</p>
+            <footer id="footer" class="center">
+                <p>&copy; 2023 Gabriel Carrillo | W2 Bio Update Assignment</p>
             </footer>
         </div>
 
@@ -117,10 +127,10 @@
             }
 
             // when header is clicked the page will show all divs
-            header.addEventListener("click", function(e){
+            header.addEventListener("click", function (e) {
                 var div = document.querySelectorAll(`.content`)
                 // loop through each div and remove hide class
-                for (let i = 0; i < div.length; i++){
+                for (let i = 0; i < div.length; i++) {
                     div[i].classList.remove(`hide`)
                 }
             })
