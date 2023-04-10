@@ -4,14 +4,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>W3 | Bio CSS Grid</title>
+        <title>W3 | Bio Grid Assignment</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <main>
             <!-- header -->
-            <header>
-                <h1>Gabriel Carrillo</h1>
+            <header class="">
+                <h1 class="">Gabriel Carrillo</h1>
             </header>
 
             <!-- navigation bar -->
@@ -21,55 +21,54 @@
                 <a href="#" class="nav"><b>Hobbies</b></a>
             </nav>
 
-                <section>
-                    <!-- bio -->
-                    <div id="bio" class="content">
-                        <h2>My Bio</h2>
-                        <p>
-                            I am currently a freshman at the
-                            <b>New England Institute of Technology</b>, where I
-                            am pursuing a bachelor's degree in
-                            <i>Software Engineering</i>. Before starting
-                            college, I attended
-                            <strong>Taunton High School</strong> and developed a
-                            passion for computer science and programming. I am
-                            excited to continue learning and growing in my field
-                            at NEIT, and I hope to use my knowledge and skills
-                            to make a positive impact in the world of
-                            <em>software development</em>.
-                        </p>
-                    </div>
+            <!-- bio -->
+            <section id="bio" class="">
+                <h2>My Bio</h2>
+                <div class="dark">
+                    <p class="font">
+                        I am currently a freshman at the
+                        <b>New England Institute of Technology</b>, where I am
+                        pursuing a bachelor's degree in
+                        <i>Software Engineering</i>. Before starting college, I
+                        attended <strong>Taunton High School</strong> and
+                        developed a passion for computer science and
+                        programming. I am excited to continue learning and
+                        growing in my field at NEIT, and I hope to use my
+                        knowledge and skills to make a positive impact in the
+                        world of <em>software development</em>.
+                    </p>
+                </div>
+            </section>
 
-                    <!-- schoooling -->
-                    <div id="ed" class="content hide">
-                        <h2>Schooling</h2>
-                        <ul>
-                            <li>Taunton High School</li>
-                            <li>UMASS Dartmouth University</li>
-                            <li>
-                                <a href="https://www.neit.edu/" target="_blank"
-                                    >New England Institute of Technology</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
+            <!-- schoooling -->
+            <section id="ed" class="">
+                <h2>Schooling</h2>
+                <ul class="font">
+                    <li>Taunton High School</li>
+                    <li>UMASS Dartmouth University</li>
+                    <li>
+                        <a href="https://www.neit.edu/" target="_blank"
+                            >New England Institute of Technology</a
+                        >
+                    </li>
+                </ul>
+            </section>
 
-                    <!-- hobbies -->
-                    <div id="hobbies" class="content hide">
-                        <h2>Hobbies</h2>
+            <!-- hobbies -->
+            <section id="hobbies" class="">
+                <h2>Hobbies</h2>
 
-                        <ol>
-                            <li>Video Games</li>
-                            <li>Anime</li>
-                            <li>Coding</li>
-                        </ol>
-                    </div>
-                </section>
+                <ol class="font">
+                    <li>Video Games</li>
+                    <li>Anime</li>
+                    <li>Coding</li>
+                </ol>
+            </section>
 
-                <!-- footer -->
-                <footer id="footer">
-                    <p>&copy; 2023 Gabriel Carrillo | W3 Bio Grid Assignment</p>
-                </footer>
+            <!-- footer -->
+            <footer id="footer">
+                <p>&copy; 2023 Gabriel Carrillo | W3 Bio Grid Assignment</p>
+            </footer>
 
             <script>
                 // select all 'a' links from the nav id

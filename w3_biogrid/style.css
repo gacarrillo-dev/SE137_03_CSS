@@ -17,20 +17,33 @@ serif; */
     /* border-bottom: 1px solid whitesmoke; */
 }
 
+.font {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 17px;
+}
+
+.item {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html,
 body {
     box-sizing: border-box;
     height: 100%;
     margin: 0px;
-    background-color: b;
 }
 
 main {
     display: grid;
     grid-template-areas:
         "h h h h h h"
-        "n n s s s s"
-        "n n s s s s"
+        "n n n n n n"
+        "b b b b b b"
+        "b b b b b b"
+        "i i i i s s"
+        "i i i i s s"
         "f f f f f f";
     /* color: brown; */
     border: 5px solid rgba(0, 0, 0, 0);
@@ -44,62 +57,82 @@ main {
 
 header {
     grid-area: h;
+    /* background-color: whitesmoke; */
+    /* border-radius: 5px; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    margin: 5px;
+    border-bottom: grey solid 2px;
 }
 
-header h1 {
-    padding: 10px;
+h1 {
     font-family: "Libre Baskerville", serif;
+    font-size: 42px;
     font-style: italic;
-    font-size: 72px;
-    background: -webkit-linear-gradient(
-        rgba(2, 0, 36, 1) 0%,
-        rgba(9, 9, 121, 1) 35%,
-        rgba(0, 212, 255, 1) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-}
-
-header h1:hover {
-    opacity: 0.5;
-    cursor: pointer;
+    padding-left: 15px;
 }
 
 nav {
     grid-area: n;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    width: 100px;
+    height: 1px;
+    display: none;
+    justify-content: space-between;
+    text-align: center;
 }
 nav a {
-    text-decoration: none;
-    margin-top: 8px;
-    padding: 8px;
-    color: whitesmoke;
-    background: rgb(15, 32, 39);
-    background: linear-gradient(
-        90deg,
-        rgba(15, 32, 39, 1) 0%,
-        rgba(32, 58, 67, 1) 51%,
-        rgba(44, 83, 100, 1) 100%
-    );
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
+    margin: 20px;
+    padding: 10px;
 }
 
 section {
-    grid-area: s;
-    padding-left: 20px;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 20px;
+    background: #4ac29a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #bdfff3,
+        #4ac29a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #bdfff3,
+        #4ac29a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 footer {
     grid-area: f;
+    margin: 5px 5px 5px 5px;
     display: flex;
-    padding-top: 100px;
+    align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: "Libre Baskerville", serif;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+#bio {
+    grid-area: b;
+}
+
+#bio p {
+    /* padding: 25px; */
+    margin: 25px;
+}
+
+#ed {
+    grid-area: s;
+}
+
+#hobbies {
+    grid-area: i;
+    background-image: url(images/background2.jpg);
 }
