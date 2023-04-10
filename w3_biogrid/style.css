@@ -8,15 +8,21 @@ sans-serif; */
 /* font-family: "Libre Baskerville",
 serif; */
 
+.hide {
+    display: none;
+}
+
+.content {
+    padding: 10px;
+    /* border-bottom: 1px solid whitesmoke; */
+}
+
 html,
 body {
     box-sizing: border-box;
     height: 100%;
     margin: 0px;
-}
-
-nav {
-    display: none;
+    background-color: b;
 }
 
 main {
@@ -26,13 +32,74 @@ main {
         "n n s s s s"
         "n n s s s s"
         "f f f f f f";
-    color: brown;
-    border: 10px solid black;
+    /* color: brown; */
+    border: 5px solid rgba(0, 0, 0, 0);
     box-sizing: border-box;
     min-height: 100%;
-    background-color: yellowgreen;
     /*Center a Box element*/
     width: 1000px;
     position: relative;
     margin: 0 auto 0 auto;
+}
+
+header {
+    grid-area: h;
+}
+
+header h1 {
+    padding: 10px;
+    font-family: "Libre Baskerville", serif;
+    font-style: italic;
+    font-size: 72px;
+    background: -webkit-linear-gradient(
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+header h1:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+nav {
+    grid-area: n;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    width: 100px;
+}
+nav a {
+    text-decoration: none;
+    margin-top: 8px;
+    padding: 8px;
+    color: whitesmoke;
+    background: rgb(15, 32, 39);
+    background: linear-gradient(
+        90deg,
+        rgba(15, 32, 39, 1) 0%,
+        rgba(32, 58, 67, 1) 51%,
+        rgba(44, 83, 100, 1) 100%
+    );
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    grid-area: s;
+    padding-left: 20px;
+}
+
+footer {
+    grid-area: f;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
 }

@@ -10,29 +10,21 @@
     <body>
         <main>
             <!-- header -->
-            <div>
+            <header>
                 <h1>Gabriel Carrillo</h1>
-            </div>
+            </header>
 
             <!-- navigation bar -->
-            <nav>
-                <a href="#" class="nav"><b>BIO</b></a>
-                <a href="#" class="nav"><b>EDUCATION</b></a>
-                <a href="#" class="nav"><b>HOBBIES</b></a>
+            <nav id="nav">
+                <a href="#" class="nav"><b>Bio</b></a>
+                <a href="#" class="nav"><b>Education</b></a>
+                <a href="#" class="nav"><b>Hobbies</b></a>
             </nav>
 
-            <!-- MAIN -->
-            <div id="main">
-                <!-- bio -->
-                <div id="bio" class="content">
-                    <h2>My Bio</h2>
-                    <div class="biopic">
-                        <img
-                            src="images/me.JPG"
-                            alt="Young Gabriel"
-                            class="me"
-                        />
-
+                <section>
+                    <!-- bio -->
+                    <div id="bio" class="content">
+                        <h2>My Bio</h2>
                         <p>
                             I am currently a freshman at the
                             <b>New England Institute of Technology</b>, where I
@@ -47,71 +39,37 @@
                             <em>software development</em>.
                         </p>
                     </div>
-                </div>
 
-                <!-- schoooling -->
-                <div id="ed" class="content hide">
-                    <h2>Schooling</h2>
-                    <div class="center">
-                        <img
-                            src="images/schools/THS.png"
-                            alt="Taunton High School"
-                        />
-
-                        <img
-                            src="images/schools/umassd_school.png"
-                            alt="UMASS Dartmouth"
-                        />
-                        <img
-                            src="images/schools/neit_school.png"
-                            alt="Neit School"
-                        />
+                    <!-- schoooling -->
+                    <div id="ed" class="content hide">
+                        <h2>Schooling</h2>
+                        <ul>
+                            <li>Taunton High School</li>
+                            <li>UMASS Dartmouth University</li>
+                            <li>
+                                <a href="https://www.neit.edu/" target="_blank"
+                                    >New England Institute of Technology</a
+                                >
+                            </li>
+                        </ul>
                     </div>
 
-                    <ul>
-                        <li>Taunton High School</li>
-                        <li>UMASS Dartmouth University</li>
-                        <li>
-                            <a href="https://www.neit.edu/" target="_blank"
-                                >New England Institute of Technology</a
-                            >
-                        </li>
-                    </ul>
-                </div>
+                    <!-- hobbies -->
+                    <div id="hobbies" class="content hide">
+                        <h2>Hobbies</h2>
 
-                <!-- hobbies -->
-                <div id="hobbies" class="content hide">
-                    <h2>Hobbies</h2>
-                    <div class="center">
-                        <img
-                            src="images/hobbies/anime.png"
-                            alt="anime poster"
-                        />
-                        <img
-                            src="images/hobbies/coding.png"
-                            alt="coding poster"
-                            class="anime"
-                        />
-                        <img
-                            src="images/hobbies/gaming.png"
-                            alt="gaming poster"
-                            class="anime"
-                        />
+                        <ol>
+                            <li>Video Games</li>
+                            <li>Anime</li>
+                            <li>Coding</li>
+                        </ol>
                     </div>
-                    <ol>
-                        <li>Video Games</li>
-                        <li>Anime</li>
-                        <li>Coding</li>
-                    </ol>
-                </div>
+                </section>
 
                 <!-- footer -->
-                <footer id="footer" class="center">
-                    <p>
-                        &copy; 2023 Gabriel Carrillo | W2 Bio Update Assignment
-                    </p>
+                <footer id="footer">
+                    <p>&copy; 2023 Gabriel Carrillo | W3 Bio Grid Assignment</p>
                 </footer>
-            </div>
 
             <script>
                 // select all 'a' links from the nav id
