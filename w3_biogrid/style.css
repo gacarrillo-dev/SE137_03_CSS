@@ -8,4 +8,31 @@ sans-serif; */
 /* font-family: "Libre Baskerville",
 serif; */
 
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0px;
+}
 
+nav {
+    display: none;
+}
+
+main {
+    display: grid;
+    grid-template-areas:
+        "h h h h h h"
+        "n n s s s s"
+        "n n s s s s"
+        "f f f f f f";
+    color: brown;
+    border: 10px solid black;
+    box-sizing: border-box;
+    min-height: 100%;
+    background-color: yellowgreen;
+    /*Center a Box element*/
+    width: 1000px;
+    position: relative;
+    margin: 0 auto 0 auto;
+}
