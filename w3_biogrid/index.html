@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>W2 | Bio Update Assignment</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <div>
+            <h1>Gabriel Carrillo</h1>
+        </div>
+
+        <!-- navigation bar -->
+        <div class="center" id="nav">
+            <a href="#" class="nav"><b>BIO</b></a>
+            <a href="#" class="nav"><b>EDUCATION</b></a>
+            <a href="#" class="nav"><b>HOBBIES</b></a>
+        </div>
+
+        <!-- MAIN -->
+        <div id="main">
+            <!-- bio -->
+            <div id="bio" class="content">
+                <h2>My Bio</h2>
+                <div class="biopic">
+                    <img src="images/me.JPG" alt="Young Gabriel" class="me" />
+
+                    <p>
+                        I am currently a freshman at the
+                        <b>New England Institute of Technology</b>, where I am
+                        pursuing a bachelor's degree in
+                        <i>Software Engineering</i>. Before starting college, I
+                        attended <strong>Taunton High School</strong> and
+                        developed a passion for computer science and
+                        programming. I am excited to continue learning and
+                        growing in my field at NEIT, and I hope to use my
+                        knowledge and skills to make a positive impact in the
+                        world of <em>software development</em>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- schoooling -->
+            <div id="ed" class="content hide">
+                <h2>Schooling</h2>
+                <div class="center">
+                    <img
+                        src="images/schools/THS.png"
+                        alt="Taunton High School"
+                    />
+
+                    <img
+                        src="images/schools/umassd_school.png"
+                        alt="UMASS Dartmouth"
+                    />
+                    <img
+                        src="images/schools/neit_school.png"
+                        alt="Neit School"
+                    />
+                </div>
+
+                <ul>
+                    <li>Taunton High School</li>
+                    <li>UMASS Dartmouth University</li>
+                    <li>
+                        <a href="https://www.neit.edu/" target="_blank"
+                            >New England Institute of Technology</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <!-- hobbies -->
+            <div id="hobbies" class="content hide">
+                <h2>Hobbies</h2>
+                <div class="center">
+                    <img src="images/hobbies/anime.png" alt="anime poster" />
+                    <img
+                        src="images/hobbies/coding.png"
+                        alt="coding poster"
+                        class="anime"
+                    />
+                    <img
+                        src="images/hobbies/gaming.png"
+                        alt="gaming poster"
+                        class="anime"
+                    />
+                </div>
+                <ol>
+                    <li>Video Games</li>
+                    <li>Anime</li>
+                    <li>Coding</li>
+                </ol>
+            </div>
+
+            <!-- footer -->
+            <footer id="footer" class="center">
+                <p>&copy; 2023 Gabriel Carrillo | W2 Bio Update Assignment</p>
+            </footer>
+        </div>
+
+        <script>
+            // select all 'a' links from the nav id
+            var a = document.querySelectorAll(`#nav a`)
+            var header = document.querySelector(`h1`)
+
+            // loop through the links in nav
+            for (let i = 0; i < a.length; i++) {
+                a[i].addEventListener("click", function (e) {
+                    // remove link default value to not go to new page
+                    e.preventDefault()
+
+                    // select all tags that have 'content' class
+                    var div = document.querySelectorAll(`.content`)
+
+                    // loop through each div and add the 'hide' class
+                    for (let i = 0; i < div.length; i++) {
+                        div[i].classList.add(`hide`)
+                    }
+
+                    // remove 'hide' class from clicked link
+                    div[i].classList.remove(`hide`)
+                })
+            }
+
+            // when header is clicked the page will show all divs
+            header.addEventListener("click", function (e) {
+                var div = document.querySelectorAll(`.content`)
+                // loop through each div and remove hide class
+                for (let i = 0; i < div.length; i++) {
+                    div[i].classList.remove(`hide`)
+                }
+            })
+        </script>
+    </body>
+</html>
