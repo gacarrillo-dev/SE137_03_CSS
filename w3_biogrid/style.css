@@ -39,12 +39,11 @@ main {
     display: grid;
     grid-template-areas:
         "h h h h h h"
-        "n n n n n n"
+        /* "n n n n n n" */
         "b b b b b b"
-        "b b b b b b"
-        "i i i i s s"
         "i i i i s s"
         "f f f f f f";
+    /* color: brown; */
     border: 5px solid rgba(0, 0, 0, 0);
     box-sizing: border-box;
     min-height: 100%;
@@ -57,22 +56,24 @@ main {
 
 header {
     grid-area: h;
-    font-family: "Libre Baskerville", serif;
-    margin: 5px;
-    border-bottom: grey solid 2px;
-    font-size: 24px;
+    /* background-color: whitesmoke; */
+    /* border-radius: 5px; */
     display: flex;
     align-items: flex-end;
     justify-content: left;
+    margin: 5px;
+    border-bottom: grey solid 2px;
 }
+
 h1 {
-    font-style:italic;
+    font-family: "Libre Baskerville", serif;
+    font-size: 42px;
+    font-style: italic;
+    padding-left: 15px;
 }
 
 nav {
     grid-area: n;
-    height: 1px;
-    display: none;
     justify-content: space-between;
     text-align: center;
 }
@@ -120,7 +121,6 @@ h2 {
 }
 
 #bio p {
-    /* padding: 25px; */
     margin: 25px;
 }
 
