@@ -8,99 +8,106 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <!-- header -->
-        <div>
-            <h1>Gabriel Carrillo</h1>
-        </div>
+        <main>
+            <!-- header -->
+            <div>
+                <h1>Gabriel Carrillo</h1>
+            </div>
 
-        <!-- navigation bar -->
-        <div class="center" id="nav">
-            <a href="#" class="nav"><b>BIO</b></a>
-            <a href="#" class="nav"><b>EDUCATION</b></a>
-            <a href="#" class="nav"><b>HOBBIES</b></a>
-        </div>
+            <!-- navigation bar -->
+            <div class="center" id="nav">
+                <a href="#" class="nav"><b>BIO</b></a>
+                <a href="#" class="nav"><b>EDUCATION</b></a>
+                <a href="#" class="nav"><b>HOBBIES</b></a>
+            </div>
 
-        <!-- MAIN -->
-        <div id="main">
-            <!-- bio -->
-            <div id="bio" class="content">
-                <h2>My Bio</h2>
-                <div class="biopic">
-                    <img src="images/me.JPG" alt="Young Gabriel" class="me" />
+            <!-- MAIN -->
+            <div id="main">
+                <!-- bio -->
+                <div id="bio" class="content">
+                    <h2>My Bio</h2>
+                    <div class="biopic">
+                    
+                        <p>
+                            I am currently a freshman at the
+                            <b>New England Institute of Technology</b>, where I
+                            am pursuing a bachelor's degree in
+                            <i>Software Engineering</i>. Before starting
+                            college, I attended
+                            <strong>Taunton High School</strong> and developed a
+                            passion for computer science and programming. I am
+                            excited to continue learning and growing in my field
+                            at NEIT, and I hope to use my knowledge and skills
+                            to make a positive impact in the world of
+                            <em>software development</em>.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- schoooling -->
+                <div id="ed" class="content hide">
+                    <h2>Schooling</h2>
+                    <div class="center">
+                        <img
+                            src="images/schools/THS.png"
+                            alt="Taunton High School"
+                        />
+
+                        <img
+                            src="images/schools/umassd_school.png"
+                            alt="UMASS Dartmouth"
+                        />
+                        <img
+                            src="images/schools/neit_school.png"
+                            alt="Neit School"
+                        />
+                    </div>
+
+                    <ul>
+                        <li>Taunton High School</li>
+                        <li>UMASS Dartmouth University</li>
+                        <li>
+                            <a href="https://www.neit.edu/" target="_blank"
+                                >New England Institute of Technology</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- hobbies -->
+                <div id="hobbies" class="content hide">
+                    <h2>Hobbies</h2>
+                    <div class="center">
+                        <img
+                            src="images/hobbies/anime.png"
+                            alt="anime poster"
+                        />
+                        <img
+                            src="images/hobbies/coding.png"
+                            alt="coding poster"
+                            class="anime"
+                        />
+                        <img
+                            src="images/hobbies/gaming.png"
+                            alt="gaming poster"
+                            class="anime"
+                        />
+                    </div>
+                    <ol>
+                        <li>Video Games</li>
+                        <li>Anime</li>
+                        <li>Coding</li>
+                    </ol>
+                </div>
+
+                <!-- footer -->
+                <footer id="footer" class="center">
                     <p>
-                        I am currently a freshman at the
-                        <b>New England Institute of Technology</b>, where I am
-                        pursuing a bachelor's degree in
-                        <i>Software Engineering</i>. Before starting college, I
-                        attended <strong>Taunton High School</strong> and
-                        developed a passion for computer science and
-                        programming. I am excited to continue learning and
-                        growing in my field at NEIT, and I hope to use my
-                        knowledge and skills to make a positive impact in the
-                        world of <em>software development</em>.
+                        &copy; 2023 Gabriel Carrillo | W2 Bio Update Assignment
                     </p>
-                </div>
+                </footer>
             </div>
-
-            <!-- schoooling -->
-            <div id="ed" class="content hide">
-                <h2>Schooling</h2>
-                <div class="center">
-                    <img
-                        src="images/schools/THS.png"
-                        alt="Taunton High School"
-                    />
-
-                    <img
-                        src="images/schools/umassd_school.png"
-                        alt="UMASS Dartmouth"
-                    />
-                    <img
-                        src="images/schools/neit_school.png"
-                        alt="Neit School"
-                    />
-                </div>
-
-                <ul>
-                    <li>Taunton High School</li>
-                    <li>UMASS Dartmouth University</li>
-                    <li>
-                        <a href="https://www.neit.edu/" target="_blank"
-                            >New England Institute of Technology</a
-                        >
-                    </li>
-                </ul>
-            </div>
-
-            <!-- hobbies -->
-            <div id="hobbies" class="content hide">
-                <h2>Hobbies</h2>
-                <div class="center">
-                    <img src="images/hobbies/anime.png" alt="anime poster" />
-                    <img
-                        src="images/hobbies/coding.png"
-                        alt="coding poster"
-                        class="anime"
-                    />
-                    <img
-                        src="images/hobbies/gaming.png"
-                        alt="gaming poster"
-                        class="anime"
-                    />
-                </div>
-                <ol>
-                    <li>Video Games</li>
-                    <li>Anime</li>
-                    <li>Coding</li>
-                </ol>
-            </div>
-
-            <!-- footer -->
-            <footer id="footer" class="center">
-                <p>&copy; 2023 Gabriel Carrillo | W2 Bio Update Assignment</p>
-            </footer>
-        </div>
+        </main>
 
         <script>
             // select all 'a' links from the nav id

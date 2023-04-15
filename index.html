@@ -5,62 +5,140 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Gabriel Carrillo" />
-        <meta name="description" content="" />
+        <meta name="description" content="SE137" />
+        <link rel="stylesheet" href="style.css" />
         <title>SE137.03 CSS</title>
     </head>
     <body>
-        <div id="wrapper">
-            <div id="header">
+        <main>
+            <header>
                 <h1>Gabriel Carrillo - SE137.03</h1>
-            </div>
+            </header>
             <!-- / #header -->
 
-            <div id="nav">
-                <!-- main index list -->
-                <ul>
-                    <!-- Weekly List -->
-                    <li>Week #1</li>
-                    <ul>
-                        <li><a href="week1_demo/index.html">Week 1 Demo</a></li>
-                        <li>
-                            <a href="w1_bio/index.html">W#1 | Bio CSS</a>
-                        </li>
-                    </ul>
+            <!-- nav -->
+            <nav id="nav" class="nav-style">
+                <a href="#week1">Week 1</a>
+                <a href="#week2">Week 2</a>
+                <a href="#week3">Week 3</a>
+            </nav>
+            <!-- Week 1 -->
+            <section id="week1" class="week-container">
+                <h2>Week #1</h2>
+                <div class="week-style-container">
+                    <div class="week-border">
+                        <a href="week1_demo/index.html"
+                            ><img
+                                src="images/week1_demo.png"
+                                alt="Week 1 Demo"
+                            />
+                            <p>Week 1 Demo</p></a
+                        >
+                    </div>
+                    <div class="week-border">
+                        <a href="w1_bio/index.html"
+                            ><img
+                                src="images/week1_assignment.png"
+                                alt="Week 1 Assignment"
+                            />
+                            <p>Week 1 Assignment: Bio</p></a
+                        >
+                    </div>
+                </div>
+            </section>
 
-                    <!-- Weekly List -->
-                    <li>Week #2</li>
-                    <ul>
-                        <li><a href="week2_demo/index.html">Week 2 Demo</a></li>
+            <!-- Week 2 -->
+            <section id="week2" class="week-container">
+                <h2>Week #2</h2>
+                <div class="week-style-container">
+                    <div class="week-border">
+                        <a href="week2_demo/index.html"
+                            ><img
+                                src="images/week2_demo.png"
+                                alt="Week 2 Demo"
+                            />
+                            <p>Week 2 Demo</p></a
+                        >
+                    </div>
+                    <div class="week-border">
+                        <a href="w2_biocss/index.html"
+                            ><img
+                                src="images/week2_assignment.png"
+                                alt="Week 2 Assignment"
+                            />
+                            <p>Week 2 Assignment: Bio Update</p></a
+                        >
+                    </div>
+                </div>
+            </section>
 
-                        <li>
-                            <a href="w2_biocss/index.html"
-                                >W#2 | Bio Page CSS</a
-                            >
-                        </li>
-                    </ul>
-                    
-                    <li>Week #3</li>
-                    <ul>
-                        <li><a href="week3_demo/index.html">Week 3 Demo</a></li>
-                    
-                        <li>
-                            <a href="w3_biogrid/index.html">W#3 | Bio Page Grid</a>
-                        </li>
-                    </ul>
-                </ul>
-            </div>
-            <!-- / #nav -->
+            <!-- Week 3 -->
 
-            <div id="main-content">
-                <h3>Cascading Style Sheets</h3>
-            </div>
-            <!-- / #main-content -->
+            <section id="week3" class="week-container">
+                <h2>Week #3</h2>
+                <div class="week-style-container">
+                    <div class="week-border">
+                        <a href="week3_demo/index.html"
+                            ><img
+                                src="images/week3_demo.png"
+                                alt="Week 3 Demo"
+                            />
+                            <p>Week 3 Demo</p></a
+                        >
+                    </div>
+                    <div class="week-border">
+                        <a href="w3_biogrid/index.html"
+                            ><img
+                                src="images/week3_assignment.png"
+                                alt="Week 3 Assignment"
+                            />
+                            <p>Week 3 Assignment: Bio Grid</p></a
+                        >
+                    </div>
+                </div>
+            </section>
 
-            <div id="footer">
+            <!-- footer -->
+            <footer>
                 <p>&copy; G CARRILLO | SE137.03 | Spring 2023</p>
-            </div>
+            </footer>
             <!-- /#footer -->
-        </div>
-        <!--/ #wrapper -->
+        </main>
+        <!--/ End Main -->
+
+        <!-- JavaScript -->
+        <script>
+            // // select all 'a' links from the nav id
+            // var a = document.querySelectorAll(`#nav a`)
+            // var header = document.querySelector(`h1`)
+
+            // // loop through the links in nav
+            // for (let i = 0; i < a.length; i++) {
+            //     a[i].addEventListener("click", function (e) {
+            //         // remove link default value to not go to new page
+            //         e.preventDefault()
+
+            //         // select all tags that have 'content' class
+            //         var section = document.querySelectorAll(`.week-container`)
+
+            //         // loop through each div and add the 'hide' class
+            //         for (let i = 0; i < section.length; i++) {
+            //             section[i].classList.add(`hide`)
+            //         }
+
+            //         // remove 'hide' class from clicked link
+            //         section[i].classList.remove(`hide`)
+            //     })
+            // }
+
+            // // when header is clicked the page will show all divs
+            // header.addEventListener("click", function (e) {
+            //     var section = document.querySelectorAll(`.week-container`)
+            //     // loop through each div and remove hide class
+            //     for (let i = 0; i < div.length; i++) {
+            //         section[i].classList.remove(`hide`)
+            //     }
+            // })
+        </script>
     </body>
 </html>
