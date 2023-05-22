@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="stats.css"
+    </head>
+    <body>
+        <h1>Page Full of Important Statistics</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td id="header-name"><b>NAME</b></td>
+                    <td id="header-id"><b>ID</b></td>
+                    <td id="header-s1" class="stat">Statistic1</td>
+                    <td id="header-s2" class="stat">Statistic2</td>
+                    <td id="header-s3" class="stat">Statistic3</td>
+                    <td id="header-s4" class="stat">Statistic4</td>
+                    <td id="header-s5" class="stat">Statistic5</td>
+                    <td id="header-s6" class="stat">Statistic6</td>
+                    <td id="header-avg"><b>AVERAGE</b></td>
+                    <td id="header-tot"><b>TOTAL</b></td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script>
+            
+            // Store full names and abbreviations in two arrays
+            const fullNames = [
+                "NAME",
+                "ID",
+                "Statistic1",
+                "Statistic2",
+                "Statistic3",
+                "Statistic4",
+                "Statistic5",
+                "Statistic6",
+                "AVERAGE",
+                "TOTAL",
+            ]
+            const abbreviations = [
+                "NM",
+                "ID",
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "AVG",
+                "TOT",
+            ]
+
+            var body = document.querySelector(`tbody`)
+            console.log(body)
+            var content = ``
+
+            var numOfStats = 6
+            var numOfPeople = 50
+
+            for (let i = 0; i < numOfPeople; i++) {
+                var avg = 0
+                var total = 0
+                var id = ``
+
+                for (let j = 0; j < numOfStats; j++) {
+                    id += Math.floor(Math.random() * 9.9).toString()
+                }
+
+                content += `<tr>`
+
+                content += `<td><b>Dude ${i}</b></td>`
+                content += `<td><b>${id}</b></td>`
+
+                for (let j = 0; j < numOfStats; j++) {
+                    var stat = Math.floor(Math.random() * 100.9)
+                    content += `<td class="stat">${stat}</td>`
+                    total += stat
+                }
+
+                avg = total / numOfStats
+                content += `<td><b>${avg.toFixed(2)}</b></td>`
+                content += `<td><b>${total}</b></td>`
+
+                content += `</tr>`
+            }
+            body.innerHTML = content
+
+            // Change the table headers based on the viewport width
+            function changeTableHeaders() {
+                // Get all the td elements with IDs starting with 'header-'
+                const headers = document.querySelectorAll('[id^="header-"]')
+
+                // If the viewport width is less than or equal to 1000px, use abbreviations. Otherwise, use full names.
+                const names =
+                    window.innerWidth <= 1000 ? abbreviations : fullNames
+
+                // Update each table header
+                for (let i = 0; i < headers.length; i++) {
+                    headers[i].innerHTML = "<b>" + names[i] + "</b>"
+                }
+            }
+
+            // Call the function when the page loads
+            changeTableHeaders()
+
+            // Call the function when the window is resized
+            window.onresize = changeTableHeaders
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100vh;
+    font-size: 16px;
+    background-color: #F2F3F4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #4285F4;
+    color: white;
+}
+
+td {
+    border-bottom: 1px solid black;
+    font-size: 1em;
+}
+
+thead td {
+    font-size: 1em;
+}
+
+/* Media queries for responsive design */
+
+@media screen and (max-width: 1920px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    thead td {
+        font-size: 1em;
+    }
+
+    tbody td {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    thead td {
+        font-size: 1em;
+    }
+
+    tbody td {
+        font-size: 1em;
+    }
+
+    thead td:nth-child(n+3)::before {
+        content: attr(data-abbr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    thead td {
+        font-size: 1.5em;
+    }
+
+    tbody td {
+        font-size: 1.25em;
+    }
+
+    thead td:nth-child(n+3):nth-child(-n+8),
+    tbody td:nth-child(n+3):nth-child(-n+8) {
+        display: none;
+    }
+}
