@@ -1,13 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Software Layout</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 6 - Software Layout</title>
+        <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://kit.fontawesome.com/fb3cb5e04f.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <main>
+            <!-- HEADER -->
+            <header>
+                <div id="header-nav">
+                    <a href="#">File</a>
+                    <a href="#">Edit</a>
+                    <a href="#">Help</a>
+                </div>
+
+                <p>Week 6 Assignment</p>
+
+                <i class="fa-solid fa-gear"></i>
+            </header>
+
+            <!-- Sidebar -->
+            <section>
+                <aside>
+                    <div><a href="#" id="toggle"><i class="fa-sharp fa-solid fa-bars fa-2xl"></i></a>
+
+                    <i class="fa-brands fa-windows fa-2xl"></i></div>
+                    
+                    <i class="fa-sharp fa-solid fa-trash-can fa-2xl"></i>
+                </aside>
+                <div class="tray">
+                    <div id="inner-tray">
+                        <details>
+                            <summary>Files</summary>
+                            <ul class="custom-list">
+                                <li>
+                                    <i class="fa-sharp fa-solid fa-file space-right"></i>
+                                    File 1
+                                </li>
+                                <li>
+                                    <i class="fa-sharp fa-solid fa-file space-right"></i>
+                                    File 2
+                                </li>
+                                <li>
+                                    <i class="fa-sharp fa-solid fa-file space-right"></i>
+                                    File 3
+                                </li>
+                                <li>
+                                    <i class="fa-sharp fa-solid fa-file space-right"></i>
+                                    File 4
+                                </li>
+                            </ul>
+                        </details>
+
+                        <details>
+                            <summary>Other Stuff</summary>
+                            <ul class="custom-list">
+                                <li>
+                                    <i
+                                        class="fa-solid fa-fire-flame-curved space-right"></i>
+                                    Stuff 1
+                                </li>
+                                <li>
+                                    <i
+                                        class="fa-solid fa-fire-flame-curved space-right"
+                                    ></i>
+                                    Stuff 2
+                                </li>
+                            </ul>
+                        </details>
+                    </div>
+                </div>
+
+                <!-- Tab Side w/ Text Area -->
+                <div id="editor">
+                    <nav class="tab-bar">
+                        <a href="#" class="tab-setting"><div><i class="fa-sharp fa-solid fa-plane-up fa-xs space-right"></i></i> Tab 1</div> <i class="fa-sharp fa-solid fa-xmark fa-xs"></i></a>
+                        <a href="#" class="tab-setting"><div><i class="fa-sharp fa-solid fa-plane-up fa-xs space-right"></i> Tab 2</div> <i class="fa-sharp fa-solid fa-xmark fa-xs"></i></a>
+                        <a href="#" class="tab-setting"><div><i class="fa-sharp fa-solid fa-plane-up fa-xs space-right"></i> Tab 3</div> <i class="fa-sharp fa-solid fa-xmark fa-xs"></i></a>
+                    </nav>
+                    <p class="breadcrumbs">words</p>
+                    <textarea> </textarea>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer><p>Text goes here</p> <i class="fa-solid fa-wifi"></i></footer>
+        </main>
+        <script src="script.js"></script>
+    </body>
 </html>
